@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1>Contate-me</h1>
     
-    <ul>
+    <ul id="menu">
         <li>
             <a href="index.html" >Home</a>
         </li>
@@ -19,32 +19,60 @@
 
     </ul>
 
-    <form >
-        <label for="nome">Nome:</label> <br>
-        <input type="text" id="nome">
-        <br>
-        <br>
+    <h1 class="center">Contate-me</h1>
 
-        <label for="email">Email:</label> <br>
-        <input type="email" id="email">
-        <br>
-        <br>
+    <div class="container mb-50">
+        <div>
+         
+            <form >
+                <label for="nome">Nome:</label> <br>
+                <input type="text" id="nome" onkeyup='validaNome()'>
+                <div id= 'txtNome'></div>
+                <br>
+                <label for="email">Email:</label> <br>
+                <input type="email" id="email" onkeyup='validaEmail()'>
+                <div id= 'txtEmail'></div>
+                <br>
 
-        <label for="assunto">Assunto:</label> <br>
-       <textarea name="" id="" cols="30" rows="10"></textarea>
-       <br>
-       <br>
+                <label for="assunto">Assunto:</label> <br>
+               <textarea name="assunto" id="assunto" cols="30" rows="10" onkeyup='validaAssunto()'></textarea>
+               <div id= 'txtAssunto'></div>
+               <br>
 
-       <button>Enviar</button>
+               <button onclick="enviar()">Enviar</button>
+            </form>
+        </div>
 
-       <h2>Localização</h2>
+        <div class="ml-50">
+            <h2 >Localização</h2>
 
-       <p>Mauá-SP</p>
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116936.5826748547!2d-46.510983756514754!3d-23.666364629331166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce69549e48e43f%3A0xe210627a68fc88df!2zTWF1w6EsIFNQ!5e0!3m2!1spt-BR!2sbr!4v1615301883922!5m2!1spt-BR!2sbr" 
-       width="450" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <p>Mauá-SP</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.
+            350365473141!2d-46.43136638502011!3d-23.66342528463235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+            1!3m3!1m2!1s0x94ce6ea619bc2139%3A0xd1fddd1093d4a1a7!2sR.%20Dr.
+            %20Jo%C3%A3o%20Carlos%20Azevedo%2C%20275%20-%20Jardim%20Maring%C3%A1%2C%20Mau%C3%A1%20-%20SP%2C%2009341-
+            260!5e0!3m2!1spt-BR!2sbr!4v1615484654195!5m2!1spt-BR!2sbr" 
+            width="450" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" 
+            tabindex="0"  onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
+        </div>
+    </div>
 
+    <hr>
+    <footer>
+        <div class="container">
+            <a href="https://www.linkedin.com/in/mj77/" target="_blank">
+           <img class= "tm-social" src="assets/imagens/linkedin.png" alt="Logo Linkedin">
+            </a>
+            <a href="https://github.com/Milton-668" target="_blank">
+           <img class= "tm-social" src="assets/imagens/github.png" alt="Logo GitHub">
+            </a>
+            <a href="mailto:miltonmjcp@gmail.com" target="_blank">
+           <img class= "tm-social" src="assets/imagens/gmail.png" alt="Logo Gmail">
+           </a>
+        </div>
+        <p class="center">Todos os direitos reservados- Milton Jr &copy</p>
+    </footer>
 
-    </form>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
